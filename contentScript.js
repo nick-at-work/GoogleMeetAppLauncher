@@ -26,10 +26,10 @@
 
         const qp = changes['queryParams'].newValue;
         const newQueryParams = qp.includes('?')
-        ? qp.includes('authuser=')
-          ? qp 
-          : qp + '&authuser=0'
-        : qp + '?authuser=0';
+          ? qp.includes('authuser=')
+            ? qp
+            : qp + '&authuser=0'
+          : qp + '?authuser=0';
 
         const currentHref = window.location.href;
         const newHref = 'https://meet.google.com/' + newQueryParams;

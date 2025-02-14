@@ -1,36 +1,22 @@
 {
-  "name": "Speedy Meet",
+  "name": "Google Meet App Launcher",
   "version": "0.1.0",
   "description": "Open Google Meet links in the PWA by default",
-  "permissions": [
-    "scripting",
-    "storage",
-    "tabs"
-  ],
-  "host_permissions": [
-    "https://meet.google.com/*"
-  ],
+  "permissions": ["scripting", "storage", "tabs"],
+  "host_permissions": ["https://meet.google.com/*"],
   "background": {
     "service_worker": "background.js"
   },
   "content_scripts": [
     {
-      "matches": [
-        "https://meet.google.com/*"
-      ],
-      "js": [
-        "contentScript.js"
-      ]
+      "matches": ["https://meet.google.com/*"],
+      "js": ["contentScript.js"]
     }
   ],
   "web_accessible_resources": [
     {
-      "resources": [
-        "assets/ext-icon.png"
-      ],
-      "matches": [
-        "https://meet.google.com/*"
-      ]
+      "resources": ["assets/ext-icon.png"],
+      "matches": ["https://meet.google.com/*"]
     }
   ],
   "action": {
@@ -39,7 +25,7 @@
       "24": "assets/ext-icon.png",
       "32": "assets/ext-icon.png"
     },
-    "default_title": "Speedy Meet",
+    "default_title": "Google Meet App Launcher",
     "default_popup": "popup.html"
   },
   "icons": {
